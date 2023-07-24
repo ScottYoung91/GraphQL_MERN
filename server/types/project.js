@@ -1,7 +1,7 @@
 //Mongoose Models
 const Client = require('../models/Client');
 
-const ClientType = require('./clientType');
+const ClientType = require('./client');
 
 const { GraphQLObjectType, GraphQLID, GraphQLString } = require('graphql');
 

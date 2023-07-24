@@ -1,5 +1,5 @@
 //types
-const ClientType = require('../types/clientType');
+const ClientType = require('../types/client');
 
 //Mongoose Models
 const Client = require('../models/Client');

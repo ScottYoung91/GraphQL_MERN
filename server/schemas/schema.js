@@ -1,10 +1,10 @@
 //types
-const ClientType = require('../types/clientType');
-const ProjectType = require('../types/projectType');
+const ClientType = require('../types/client');
+const ProjectType = require('../types/project');
 
 //Queries
-const projectQueries = require('../queries/projectQueries');
-const clientQueries = require('../queries/clientQueries');
+const projectQueries = require('../queries/project');
+const clientQueries = require('../queries/client');
 
 //Mongoose Models
 const Project = require('../models/Project');

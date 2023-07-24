@@ -1,5 +1,5 @@
 //types
-const ProjectType = require('../types/projectType');
+const ProjectType = require('../types/project');
 
 //Mongoose Models
 const Project = require('../models/Project');
