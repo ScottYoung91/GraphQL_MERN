@@ -1,21 +1,12 @@
-//types
-const ClientType = require('../types/client');
-const ProjectType = require('../types/project');
-
 //Queries
 const projectQueries = require('../queries/project');
 const clientQueries = require('../queries/client');
 
-//Mongoose Models
-const Project = require('../models/Project');
-const Client = require('../models/Client');
+//Mutations
+const clientMutations = require('../mutations/client');
+const projectMutations = require('../mutations/project');
 
-const {
-	GraphQLObjectType,
-	GraphQLSchema,
-	GraphQLID,
-	GraphQLList,
-} = require('graphql');
+const { GraphQLObjectType, GraphQLSchema } = require('graphql');
 
 //Root Query
 const RootQuery = new GraphQLObjectType({
@@ -25,7 +16,15 @@ const RootQuery = new GraphQLObjectType({
 		...clientQueries,
 	},
 });
+const mutation = new GraphQLObjectType({
+	name: 'Mutation',
+	fields: {
+		...clientMutations,
+		...projectMutations,
+	},
+});
 
 module.exports = new GraphQLSchema({
 	query: RootQuery,
+	mutation,
 });
